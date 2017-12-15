@@ -11,6 +11,8 @@ public ModelAndView index(){
 	ModelAndView mav = new ModelAndView();
 	mav.addObject("hello", "Hello world!");
 	mav.setViewName("index");
+	
+	
 	return mav;
 }
 }

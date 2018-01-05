@@ -37,8 +37,8 @@
 	</tx:attributes>
 </tx:advice>
 <!-- 要扫描的serviceImpl包 aop -->
-<aop:config>
-	<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.ssm.service.impl.*.*(..))"/>
+<aop:config proxy-target-class="true">
+	<aop:pointcut id="mysqlTransactionPointcut" expression="execution(* com.dqdg.service.*(..))"/>
 </aop:config>
 
 </beans>
